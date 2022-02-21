@@ -1,0 +1,34 @@
+@use 'assets/scss/base' as *;
+
+// Button
+$btn-ptb: 13px;
+$btn-plr: 30px;
+$btn-rad: 20px;
+
+a.link-button {
+	font-weight: 600;
+	font-size: $base-fz;
+	color: $neutral-white;
+	display: inline-block;
+	text-decoration: none;
+	border-radius: $btn-rad;
+
+	&.default {
+		padding: $btn-ptb $btn-plr;
+	}
+	&.bg {
+		background-color: -webkit-linear-gradient(
+			to right,
+			$gradient-very-light-red,
+			$gradient-light-red
+		);
+		background: linear-gradient(
+			to right,
+			$gradient-very-light-red,
+			$gradient-light-red
+		);
+	}
+	&.border {
+		border: 1px solid $neutral-white;
+	}
+}
