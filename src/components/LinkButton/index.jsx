@@ -13,12 +13,25 @@ import './styles.scss';
 export default function LinkButton({
 	children,
 	attrs = { href: '#!' },
-	classConfig = { default: false, bg: false, border: false }
+	classConfig = { default: false, bg: false, border: false },
+	bgColor = null,
+	color = null
 }) {
 	const linkButtonClassName = classNames('link-button', classConfig);
-
+	console.log(bgColor);
 	return (
-		<a {...attrs} className={linkButtonClassName}>
+		<a
+			{...attrs}
+			className={linkButtonClassName}
+			style={
+				bgColor !== null
+					? {
+							background: bgColor,
+							color: color
+					  }
+					: {}
+			}
+		>
 			{children}
 		</a>
 	);
