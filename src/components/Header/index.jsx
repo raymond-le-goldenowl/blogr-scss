@@ -112,9 +112,10 @@ export default function Header() {
 						classConfig={{
 							default: true,
 							bg: true,
-							bgColor: '#fff',
 							border: false
 						}}
+						bgColor={'#fff'}
+						color={'hsl(356, 100%, 66%)'}
 					>
 						Start for Free
 					</LinkButton>
