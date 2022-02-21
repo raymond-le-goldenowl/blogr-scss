@@ -17,15 +17,10 @@ a.link-button {
 		padding: $btn-ptb $btn-plr;
 	}
 	&.bg {
-		background-color: -webkit-linear-gradient(
+		@include linear-gradient-mixin(
 			to right,
-			$gradient-very-light-red,
-			$gradient-light-red
-		);
-		background: linear-gradient(
-			to right,
-			$gradient-very-light-red,
-			$gradient-light-red
+			$gradient-light-red,
+			$gradient-very-light-red
 		);
 	}
 	&.border {
