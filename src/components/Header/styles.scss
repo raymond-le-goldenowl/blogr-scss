@@ -106,4 +106,26 @@
 			}
 		}
 	}
+
+	.banner {
+		text-align: center;
+		color: $neutral-white;
+		.title {
+			font-size: 0;
+			font-size: 3rem;
+			margin-top: 100px;
+			line-height: 50px;
+			margin-bottom: 30px;
+		}
+
+		.tiny-caption {
+			margin-bottom: 20px;
+		}
+
+		.vertical-buttons {
+			* {
+				margin: 10px;
+			}
+		}
+	}
 }

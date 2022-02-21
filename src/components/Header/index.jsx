@@ -97,6 +97,32 @@ export default function Header() {
 					</ul>
 				</nav>
 			</div>
+
+			{/* Banner */}
+
+			<div className='banner'>
+				<h1 className='title'>A modern publishing platform</h1>
+
+				<p className='tiny-caption'>
+					Grow your audience and build your online brand
+				</p>
+				<div className='vertical-buttons'>
+					<LinkButton
+						attrs={{ href: '#!' }}
+						classConfig={{
+							default: true,
+							bg: true,
+							bgColor: '#fff',
+							border: false
+						}}
+					>
+						Start for Free
+					</LinkButton>
+					<LinkButton classConfig={{ default: true, bg: false, border: true }}>
+						Learn More
+					</LinkButton>
+				</div>
+			</div>
 		</header>
 	);
 }
