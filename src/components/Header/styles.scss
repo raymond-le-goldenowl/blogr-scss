@@ -3,7 +3,7 @@
 .header {
 	margin: 0 auto;
 	min-width: $sc-sm;
-	max-width: $sc-xl;
+	max-width: auto;
 
 	position: relative;
 	padding-bottom: 100px;
@@ -30,6 +30,8 @@
 
 	&--top {
 		display: flex;
+		margin: 0 auto;
+		max-width: $sc-xl;
 		align-items: center;
 		justify-content: space-between;
 

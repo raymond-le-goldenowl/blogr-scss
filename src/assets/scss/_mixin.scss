@@ -4,3 +4,8 @@
 	background: -o-linear-gradient($pos, $colorA, $colorB);
 	background: -moz-linear-gradient($pos, $colorA, $colorB);
 }
+
+/* Mixin */
+$sc-sm: 375px;
+$sc-md: 750px;
+$sc-xl: 1440px;
