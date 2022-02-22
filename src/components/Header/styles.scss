@@ -108,6 +108,9 @@
 					color: $primary-very-dark-blue;
 					@include tablet {
 						color: $neutral-white;
+						&:hover {
+							text-decoration: underline;
+						}
 					}
 				}
 
@@ -115,6 +118,7 @@
 					width: 100%;
 					padding: 15px 0;
 
+					position: relative;
 					// make styles for button sign up on responsive.
 					@include tablet {
 						a.link-button.bg {
@@ -146,6 +150,14 @@
 						border-radius: 10px;
 						background-color: $neutral-grayish-blue;
 
+						// responsive submenu
+						@include tablet {
+							position: absolute;
+							right: 0;
+							padding: 20px 30px;
+							background-color: $neutral-white;
+						}
+
 						li {
 							a {
 								padding: 10px 0;
@@ -153,6 +165,12 @@
 								display: inline-block;
 								text-decoration: none;
 								color: $primary-very-dark-blue;
+
+								@include tablet {
+									&:hover {
+										color: $neutral-very-dark-black-blue;
+									}
+								}
 							}
 						}
 					}
