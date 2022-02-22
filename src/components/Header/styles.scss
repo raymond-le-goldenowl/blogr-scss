@@ -1,13 +1,14 @@
 @use 'assets/scss/base' as *;
 
 .header {
+	margin: 0 auto;
 	min-width: $sc-sm;
 	max-width: $sc-xl;
-	margin: 0 auto;
 
-	border-bottom-left-radius: 100px;
-	padding: 20px 10px;
+	position: relative;
 	padding-bottom: 100px;
+	border-bottom-left-radius: 100px;
+	z-index: 3;
 
 	@include linear-gradient-mixin(
 		to top left,
@@ -15,11 +16,24 @@
 		$gradient-very-light-red
 	);
 
+	&::before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-image: url('../../assets/images/bg-pattern-intro-mobile.svg');
+		background-repeat: no-repeat;
+		background-position: center center;
+		z-index: -1;
+		filter: grayscale(15%);
+	}
+
 	&--top {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 
+		padding: 20px 10px;
 		position: relative;
 
 		.logo {
@@ -59,7 +73,6 @@
 				.link {
 					font-weight: 600;
 					font-size: 1.1rem;
-					margin-right: 5px;
 					text-decoration: none;
 					color: $primary-very-dark-blue;
 				}
