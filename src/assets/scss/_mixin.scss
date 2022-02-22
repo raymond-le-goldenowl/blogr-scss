@@ -1,0 +1,35 @@
+@mixin linear-gradient-mixin($pos, $colorA, $colorB) {
+	background: linear-gradient($pos, $colorA, $colorB);
+	background: -webkit-linear-gradient($pos, $colorA, $colorB);
+	background: -o-linear-gradient($pos, $colorA, $colorB);
+	background: -moz-linear-gradient($pos, $colorA, $colorB);
+}
+
+/* Mixin */
+$sc-sm: 375px;
+$sc-md: 750px;
+$sc-xl: 1440px;
+
+@mixin mobile {
+	@media (min-width: #{$sc-sm - 1px}) {
+		@content;
+	}
+}
+
+@mixin mobile {
+	@media (min-width: #{$sc-sm - 1px}) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (min-width: #{$sc-xl}) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (max-width: #{$sc-xl}) {
+		@content;
+	}
+}
