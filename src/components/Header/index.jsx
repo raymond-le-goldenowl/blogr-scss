@@ -4,14 +4,21 @@ import './styles.scss';
 
 import LinkButton from 'components/LinkButton';
 
+import useWindowSize from 'hooks/useWindowSize';
+
+import logoBlogr from 'assets/images/logo.svg';
 import iconClose from 'assets/images/icon-close.svg';
 import iconHamburger from 'assets/images/icon-hamburger.svg';
 import iconArrowDark from 'assets/images/icon-arrow-dark.svg';
-import logoBlogr from 'assets/images/logo.svg';
+import iconArrowLight from 'assets/images/icon-arrow-light.svg';
 
 export default function Header() {
 	const [isHamburgerChecked, setIsHamburgerChecked] = useState(false);
 	const [isConnectChecked, setIsConnectChecked] = useState(false);
+
+	const size = useWindowSize();
+	const breakPointTablet = 1440;
+
 	return (
 		<header className='header'>
 			<div className='header--top'>
@@ -47,14 +54,28 @@ export default function Header() {
 							<label>
 								<span className='link'>Product</span>
 								<input type='checkbox' />
-								<img src={iconArrowDark} alt='arrow-icon' />
+								<img
+									src={
+										size.width > breakPointTablet
+											? iconArrowLight
+											: iconArrowDark
+									}
+									alt='arrow-icon'
+								/>
 							</label>
 						</li>
 						<li className='item'>
 							<label>
 								<span className='link'>Company</span>
 								<input type='checkbox' />
-								<img src={iconArrowDark} alt='arrow-icon' />
+								<img
+									src={
+										size.width > breakPointTablet
+											? iconArrowLight
+											: iconArrowDark
+									}
+									alt='arrow-icon'
+								/>
 							</label>
 						</li>
 						<li className='item'>
@@ -64,7 +85,14 @@ export default function Header() {
 									type='checkbox'
 									onChange={({ target }) => setIsConnectChecked(target.checked)}
 								/>
-								<img src={iconArrowDark} alt='arrow-icon' />
+								<img
+									src={
+										size.width > breakPointTablet
+											? iconArrowLight
+											: iconArrowDark
+									}
+									alt='arrow-icon'
+								/>
 							</label>
 							{/* Submenu - Contact */}
 							<ul
