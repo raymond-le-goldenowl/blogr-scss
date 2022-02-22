@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 
 import './styles.scss';
 
-import iconHamburger from 'assets/images/icon-hamburger.svg';
-import iconClose from 'assets/images/icon-close.svg';
-
-import iconArrowDark from 'assets/images/icon-arrow-dark.svg';
 import LinkButton from 'components/LinkButton';
+
+import iconClose from 'assets/images/icon-close.svg';
+import iconHamburger from 'assets/images/icon-hamburger.svg';
+import iconArrowDark from 'assets/images/icon-arrow-dark.svg';
+import logoBlogr from 'assets/images/logo.svg';
 
 export default function Header() {
 	const [isHamburgerChecked, setIsHamburgerChecked] = useState(false);
@@ -14,7 +15,9 @@ export default function Header() {
 	return (
 		<header className='header'>
 			<div className='header--top'>
-				<div className='logo'>Blogr</div>
+				<div className='logo'>
+					<img src={logoBlogr} alt='Blogr' />
+				</div>
 				<nav className='menu'>
 					{/* toggle icon navigate */}
 					<div className='toggle-icon'>
