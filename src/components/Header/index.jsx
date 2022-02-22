@@ -39,7 +39,7 @@ export default function Header() {
 						style={
 							isHamburgerChecked
 								? { transform: 'translateY(0px)', transition: 'all .5s' }
-								: { transform: 'translateY(-600px)', transition: 'all .5s' }
+								: { transform: 'translateY(-600px)' }
 						}
 						className='links'
 					>
