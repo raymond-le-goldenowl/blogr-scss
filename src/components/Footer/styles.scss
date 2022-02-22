@@ -1,15 +1,16 @@
 @use 'assets/scss/base' as *;
 
 footer.footer {
-	background-color: $neutral-very-dark-black-blue;
-	color: $neutral-grayish-blue;
-	text-align: center;
 	padding: 50px 0;
+	text-align: center;
+	color: $neutral-grayish-blue;
+	border-top-right-radius: 100px;
+	background-color: $neutral-very-dark-black-blue;
 
 	@include tablet {
 		display: flex;
-		justify-content: space-between;
 		padding: 50px;
+		justify-content: space-between;
 	}
 
 	.logo {
@@ -18,8 +19,8 @@ footer.footer {
 
 	@mixin footerTitle {
 		.title {
-			font-size: 1.2rem;
 			font-weight: 600;
+			font-size: 1.2rem;
 			margin-bottom: 20px;
 		}
 	}
@@ -37,9 +38,10 @@ footer.footer {
 		@include tablet {
 			width: 60%;
 			margin: 0 auto;
+
 			display: flex;
-			justify-content: space-between;
 			flex-wrap: wrap;
+			justify-content: space-between;
 		}
 
 		.product {
