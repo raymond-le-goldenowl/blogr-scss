@@ -9,3 +9,27 @@
 $sc-sm: 375px;
 $sc-md: 750px;
 $sc-xl: 1440px;
+
+@mixin mobile {
+	@media (min-width: #{$sc-sm - 1px}) {
+		@content;
+	}
+}
+
+@mixin mobile {
+	@media (min-width: #{$sc-sm - 1px}) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (min-width: #{$sc-xl}) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (max-width: #{$sc-xl}) {
+		@content;
+	}
+}

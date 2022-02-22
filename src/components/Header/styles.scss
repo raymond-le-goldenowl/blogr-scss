@@ -1,6 +1,7 @@
 @use 'assets/scss/base' as *;
 
 .header {
+	overflow: hidden;
 	margin: 0 auto;
 	min-width: $sc-sm;
 	max-width: auto;
@@ -26,6 +27,13 @@
 		background-position: center center;
 		z-index: -1;
 		filter: grayscale(15%);
+
+		@include tablet {
+			background-image: url('../../assets/images/bg-pattern-intro-desktop.svg');
+			background-size: cover;
+			background-position: left;
+			transform: scale(1.8) translateX(300px);
+		}
 	}
 
 	&--top {
