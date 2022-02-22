@@ -36,12 +36,12 @@ export default function Header() {
 
 					{/* navigate links */}
 					<ul
-						className='links'
 						style={
 							isHamburgerChecked
 								? { transform: 'translateY(0px)', transition: 'all .5s' }
 								: { transform: 'translateY(-600px)', transition: 'all .5s' }
 						}
+						className='links'
 					>
 						<li className='item'>
 							<label>

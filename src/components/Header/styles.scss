@@ -28,6 +28,7 @@
 		z-index: -1;
 		filter: grayscale(15%);
 
+		// responsive header image background layer
 		@include tablet {
 			background-image: url('../../assets/images/bg-pattern-intro-desktop.svg');
 			background-size: cover;
@@ -56,10 +57,19 @@
 			display: flex;
 			flex-direction: column;
 
+			@include tablet {
+				flex: 1;
+			}
+
 			.toggle-icon {
 				label img {
 					cursor: pointer;
 					transition: all 0.5s;
+				}
+
+				// responsive toggle icon
+				@include tablet {
+					display: none;
 				}
 			}
 
@@ -80,16 +90,38 @@
 				flex-direction: column;
 				justify-content: center;
 
+				// Responsive navigation links.
+				@include tablet {
+					align-items: center;
+					background-color: unset;
+
+					position: unset !important; // make sure all elements are rebase to init styles
+					transform: none !important;
+
+					flex-direction: row;
+				}
+
 				.link {
 					font-weight: 600;
 					font-size: 1.1rem;
 					text-decoration: none;
 					color: $primary-very-dark-blue;
+					@include tablet {
+						color: $neutral-white;
+					}
 				}
 
 				li.item {
 					width: 100%;
 					padding: 15px 0;
+
+					// make styles for button sign up on responsive.
+					@include tablet {
+						a.link-button.bg {
+							background: $neutral-white;
+							color: $gradient-light-red;
+						}
+					}
 
 					label {
 						cursor: pointer;
@@ -125,6 +157,10 @@
 					height: 1px;
 					margin: 0 auto;
 					background-color: $neutral-grayish-blue;
+
+					@include tablet {
+						background-color: unset;
+					}
 				}
 			}
 		}
