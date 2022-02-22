@@ -1,0 +1,60 @@
+@use 'assets/scss/base' as *;
+
+footer.footer {
+	background-color: $neutral-very-dark-black-blue;
+	color: $neutral-grayish-blue;
+	text-align: center;
+	padding: 50px 0;
+
+	@include tablet {
+		display: flex;
+		justify-content: space-between;
+		padding: 50px;
+	}
+
+	.logo {
+		padding-bottom: 50px;
+	}
+
+	@mixin footerTitle {
+		.title {
+			font-size: 1.2rem;
+			font-weight: 600;
+			margin-bottom: 20px;
+		}
+	}
+
+	@mixin footerLinks {
+		ul {
+			margin-bottom: 30px;
+			li {
+				margin: 10px 0;
+			}
+		}
+	}
+
+	.footer-nav {
+		@include tablet {
+			width: 60%;
+			margin: 0 auto;
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}
+
+		.product {
+			@include footerTitle;
+			@include footerLinks;
+		}
+
+		.company {
+			@include footerTitle;
+			@include footerLinks;
+		}
+
+		.connect {
+			@include footerTitle;
+			@include footerLinks;
+		}
+	}
+}
