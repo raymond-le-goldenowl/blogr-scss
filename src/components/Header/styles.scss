@@ -131,12 +131,6 @@
 					label {
 						cursor: pointer;
 
-						@include tablet {
-							img {
-								content: '../../assets/images/icon-arrow-light.svg';
-							}
-						}
-
 						input:checked + img {
 							transition: all 0.4s;
 							transform: rotate(180deg);

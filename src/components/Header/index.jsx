@@ -17,7 +17,7 @@ export default function Header() {
 	const [isConnectChecked, setIsConnectChecked] = useState(false);
 
 	const size = useWindowSize();
-	const breakPointTablet = 1440;
+	const breakPointTablet = 1439;
 
 	return (
 		<header className='header'>
