@@ -1,5 +1,4 @@
-@import './reset';
-@import './variables';
-@import './colors';
-@import './fonts';
-@import './mixin';
+@forward './variables';
+@forward './colors';
+@forward './fonts';
+@forward './mixin';

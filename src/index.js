@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 
 import App from './App';
+import './assets/scss/_reset.scss';
 import './assets/scss/base.scss';
 
 ReactDOM.render(
