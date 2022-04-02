@@ -7,7 +7,7 @@
 
 /* Mixin */
 $sc-sm: 375px;
-$sc-md: 750px;
+$sc-md: 936px;
 $sc-xl: 1440px;
 
 @mixin mobile {
@@ -16,20 +16,14 @@ $sc-xl: 1440px;
 	}
 }
 
-@mixin mobile {
-	@media (min-width: #{$sc-sm - 1px}) {
-		@content;
-	}
-}
-
 @mixin tablet {
-	@media (min-width: #{$sc-xl}) {
+	@media (min-width: #{$sc-md}) {
 		@content;
 	}
 }
 
 @mixin desktop {
-	@media (max-width: #{$sc-xl}) {
+	@media (min-width: #{$sc-xl}) {
 		@content;
 	}
 }
